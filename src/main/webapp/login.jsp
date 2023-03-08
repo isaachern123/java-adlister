@@ -6,23 +6,24 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+
+    <title>Login Page</title>
 </head>
+<%
+    String errorMessage = (String) session.getAttribute("errorMessage");
+    if (null !=errorMessage) { %>
+<h4> <%=errorMessage %></h4>
+<%}
+%>
 <body>
-    <form action="java/loginServlet.java" method="post">
-        <table>
-            <tr>
-                <td>UserName</td>
-                <td><input type="text" name="username" /></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="password" /></td>
-            </tr>
-        </table>
-        <input type="submit" value="Login" />
-    </form>
+<form action="LoginServlet"  method="post" >
+    Please enter your username <input type="text" name="uname" id="uname" />
+    <br>
+    Please enter your password <input type="text" name="pword" id="pword" />
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>
