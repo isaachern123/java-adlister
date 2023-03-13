@@ -1,3 +1,7 @@
+package Ads;
+
+import Ads.Ads;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Ad List</title>
+    <title>Ads.Ads.Ad List</title>
 </head>
 <body>
 

@@ -1,6 +1,8 @@
+package Ads;
+
 class Config {
     public String getUrl() {
-        return "studentdb.fulgentcorp.com";
+        return "jdbc:mysql://studentdb.fulgentcorp.com";
     }
     public String getUser() {
         return "ymir_isaac";

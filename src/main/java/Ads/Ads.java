@@ -1,3 +1,5 @@
+package Ads;
+
 import java.util.List;
 
 public interface Ads {

@@ -1,10 +1,11 @@
+package Ads;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.mysql.cj.jdbc.Driver;
 
-import javax.servlet.jsp.jstl.core.Config;
 
 public class MySQLAdsDao implements Ads {
 
@@ -13,8 +14,14 @@ public class MySQLAdsDao implements Ads {
 
     public MySQLAdsDao(Config config) {
         try {
-            DriverManager.registerDriver(new Driver));
-            connection = DriverManager.getConnection();
+            DriverManager.registerDriver(new Driver());
+            connection = DriverManager.getConnection(
+                    config.getUrl();
+                    config.getUser();
+                    config.getPassword();
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("error connecting to database");
         }
 
     }
