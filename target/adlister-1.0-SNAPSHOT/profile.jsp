@@ -1,6 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
+
 <head>
+    <title>HI</title>
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>

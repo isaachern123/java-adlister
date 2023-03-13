@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%
     if (request.getMethod().equalsIgnoreCase("post")) {
         String username = request.getParameter("username");
@@ -9,7 +9,9 @@
     }
 %>
 <html>
+
 <head>
+    <title>HI</title>
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
@@ -18,7 +20,7 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
-        <form action="/login.jsp" method="POST">
+        <form method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
