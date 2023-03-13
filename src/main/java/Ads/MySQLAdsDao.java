@@ -33,7 +33,12 @@ public class MySQLAdsDao implements Ads {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT *");
             while (rs.next())
-                ads.add(new Ad());
+                ads.add(new Ad(
+                        rs.getLong("id"),
+                        rs.getLong("userid"),
+                        rs.getString("title"),
+                        rs.getString("description")
+                ));
             }
         catch (SQLException e) {
             throw new RuntimeException(e);
