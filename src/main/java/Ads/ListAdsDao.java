@@ -2,6 +2,8 @@ package Ads;
 
 import Ads.Ads;
 
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,12 @@ public class ListAdsDao implements Ads {
         }
         return ads;
     }
+
+    @Override
+    public long insert(Ad ad) {
+        return 0;
+    }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
