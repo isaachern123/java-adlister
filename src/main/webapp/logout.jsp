@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="partials/navbar.jsp" />
 <h1>Successfully logged out</h1>
 </body>
 </html>

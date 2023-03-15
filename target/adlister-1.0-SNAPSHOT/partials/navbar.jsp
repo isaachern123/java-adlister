@@ -21,8 +21,8 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav d-flex">
-            <a class="nav-link" href="#">Ads</a>
-            <a class="nav-link " href="#">Features</a>
+            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link " href="#">Logout</a>
         </div>
     </div>
 </nav>
