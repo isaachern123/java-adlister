@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 
 import java.sql.*;
@@ -67,5 +68,15 @@ public class MySQLUsersDao implements Users{
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new user.", e);
         }
+    }
+
+
+    private User extractUser(ResultSet rs) throws SQLException {
+        return new User(
+                rs.getLong("id"),
+                rs.getString("username"),
+                rs.getString("email"),
+                rs.getString("password")
+        );
     }
 }
