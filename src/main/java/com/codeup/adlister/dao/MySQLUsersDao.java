@@ -29,7 +29,7 @@ public class MySQLUsersDao implements Users{
         User user = null;
 
         // prepare a SQL statement to select the user with the given username
-        String sql = "SELECT * FROM users WHERE username = ?";
+        String sql = "SELECT * FROM adlister_users WHERE username = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, username);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -54,16 +54,16 @@ public class MySQLUsersDao implements Users{
     @Override
     public Long insert(User user) {
         try {
-        String sql = "INSERT INTO users(id, username, email, password) VALUES (?, ?, ?, ?) ";
+        String sql = "INSERT INTO adlister_users(id, username, email, password) VALUES (?, ?, ?, ?) ";
         PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
         stmt.setLong(1, user.getId());
-        stmt.setString(3, user.getUsername());
-        stmt.setString(2, user.getEmail());
+        stmt.setString(2, user.getUsername());
+        stmt.setString(3, user.getEmail());
         stmt.setString(4, user.getPassword());
 
 
-        stmt.executeUpdate(String.valueOf(user), Statement.RETURN_GENERATED_KEYS);
+        stmt.executeUpdate();
         ResultSet rs = stmt.getGeneratedKeys();
         rs.next();
         return rs.getLong(1);

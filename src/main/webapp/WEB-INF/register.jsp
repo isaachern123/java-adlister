@@ -13,17 +13,23 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<form action=/register" method="POST">
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="email" placeholder="Email">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="username" placeholder="Username">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="password" placeholder="Password">
-    </div>
-    <button type="submit">Register</button>
-</form>
+<div class="container">
+    <form action="/register" method="POST">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 col-form-label">Username</label>
+            <input id="username" name="username" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <input id="email" name="email" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+
+            <input id="password" name="password" class="form-control" type="password">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" value="Register">
+    </form>
+</div>
 </body>
 </html>
